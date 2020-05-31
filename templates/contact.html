@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block bar5 %}active{% endblock bar5 %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="container mt-4">
+    <form action="/contact" method="POST" id="userform">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" id="username" name="name" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="usermail">Email</label>
+                <input type="email" class="form-control" id="usermail" name="email" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="userAddress">Address</label>
+                <input type="text" class="form-control" id="userAddress" placeholder="89 lightstreet New Delhi" name="address">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="userCity">City</label>
+                <input type="text" class="form-control" id="userCity" name="city">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="userState">State</label>
+                <input type="text" class="form-control" id="userState" name="state">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="phone" class="form-control" id="inputZip" name="zipcode">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <br>
+            <textarea rows="5" cols="50"form="userform" placeholder="Enter text here..." name="desc" required></textarea>
+        </div>
+        <!-- <div class="g-recaptcha" data-sitekey="6LedGP4UAAAAAGw6YJpuMfQDEUmbcdm4DPh2yvT6"></div> -->
+        <br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+        <hr>
+    </form>
+</div>
+{% endblock body %}

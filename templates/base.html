@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% block othercss %}{% endblock othercss %}">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <title>{% block  title %}{% endblock title %} | VishalPrajapti Portfolio</title>
+    <meta name="description"
+        content="Website is portfolio belongs to vishalprajapati Operated by PRAJAPATINEWS team, Managed By Gurjeet Singh Grewal 'compute with lucifer' Visit for more information" />
+    <meta name="keywords"
+        content="vishalprajapati.in,vishalprajapati,computewithlucifer,prajapatinews,prajapati photography,vishal prajapati palia kalan,gurjeet singh grewal,news channel,fast news provinders,website promotions" />
+    <link rel="canonical" href="http://www.vishalprajapati.in/" />
+    <meta name="page-topic" content="Best Online news channel in india" />
+    <meta name="copyright" content="Prajapati News" />
+    <meta name="author" content="Gurjeet Singh Grewal" />
+    <meta name="robots" content="index, follow" />
+    <meta name="rating" content="safe for kids" />
+    <meta name="googlebot" content=" index, follow " />
+    <meta name="bingbot" content=" index, follow " />
+    <meta name="reply-to" content="computewithlucifer@gmail.com" />
+    <meta name="allow-search" content="yes" />
+    <meta name="revisit-after" content="daily" />
+    <meta name="distribution" content="global" />
+    <meta name="expires" content="never" />
+    <meta http-equiv="content-language" content="english" />
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">VishalPrajapati</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item {% block bar1 %}{% endblock bar1 %}">
+                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item {% block bar2 %}{% endblock bar2 %}">
+                    <a class="nav-link" href="portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item {% block bar3 %}{% endblock bar3 %}">
+                    <a class="nav-link" href="testimonial">Testimonials</a>
+                </li>
+                <li class="nav-item {% block bar4 %}{% endblock bar4 %}">
+                    <a class="nav-link" href="about">About Us</a>
+                </li>
+                <li class="nav-item {% block bar5 %}{% endblock bar5 %}">
+                    <a class="nav-link" href="contact">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block body %}{% endblock body %}
+    <!-- footer code -->
+    <footer class="container mt-4">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p class="float-left">© 2017-2020 <a href="https://www.Prajapatinews.com" target="_blank">Prajapati News.</a> ·
+            <a href="privacy" target="_blank">Privacy</a> · <a href="terms" target="_blank">Terms</a> Managed By <a
+                href="https://www.instagram.com/computewithlucifer/" target="_blank">computewithlucifer</a></p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
