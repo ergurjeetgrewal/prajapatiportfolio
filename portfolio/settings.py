@@ -122,7 +122,8 @@ STATIC_URL = '/static/'
 
 # Custom code
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    # os.path.join(BASE_DIR, "static"),
+     '/var/www/portfolio/static/',
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 STATIC_ROOT = '/var/www/portfolio/static/'
