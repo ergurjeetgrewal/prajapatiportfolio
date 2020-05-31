@@ -25,3 +25,8 @@ def contact(request):
     return render(request,'contact.html')
 def testimonial(request):
     return render(request,'testimonial.html')
+def privacy(request):
+    return render(request,'privacy.html')
+def terms(request):
+    return render(request,'terms.html')
+    
