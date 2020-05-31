@@ -123,12 +123,11 @@ STATIC_URL = '/static/'
 # Custom code
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    # '/var/www/vishalportfolio/static/',
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'static/')
-STATIC_ROOT = '/var/www/vishalportfolio/static/'
+STATIC_ROOT = '/var/www/portfolio/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/var/www/vishalportfolio/media/'
+MEDIA_ROOT = '/var/www/portfolio/media/'
 
 CORS_REPLACE_HTTPS_REFERER      = False
 HOST_SCHEME                     = "http://"
